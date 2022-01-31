@@ -253,7 +253,7 @@
 //     const result = a + b;
 //     return result;
 //     // return - как только функция вернула какое-то значение, она завершает свою работу и дальше ничего не происходит.
-//     // в теле функции все что ниже return - недостежимый код, который никогда не будет выполнен, так как после return функция завершает свою работу. 
+//     // в теле функции все что ниже return - недостежимый код, который никогда не будет выполнен, так как после return функция завершает свою работу.
     
 //     // console.log(result);
 // }
@@ -266,7 +266,413 @@
 //     return a + b;
 // }
 
-function sayHi(name) {
-    // const userName = 'Alex';
-    console.log(`Hi, ${name}! How are you?`);
-}
+// // console.log(summ(10, 15));
+
+// const result = summ(summ(15, 15), summ(20, 20));
+
+// console.log(result);
+
+//===================================== Самовызывающаяся функция IIFE
+
+// (function sayHi() {
+//     console.log('Hi new user!');
+// })();
+
+// // sayHi()
+
+// let res = (function summ(a, b) {
+//     // console.log(a);
+//     // console.log(b);
+//     // console.log(a + b);
+//     return a + b;
+// })(10, 15);
+// console.log(res);
+
+//===================================== Стрелочные функции
+
+// function sayHi(name) {
+//      console.log(`Hi, ${name}! How are you?`);
+//  }
+
+// sayHi('Alex')
+
+// const arrSayHi = (name) => {
+//     console.log(`Hi, ${name}! How are you?`);
+// }
+ 
+// const arrSayHi = (name) => console.log(`Hi, ${name}! How are you?`);
+
+// arrSayHi('Alex');
+
+// function summ(a, b) {
+//     const result = a + b;
+// }
+
+// const summ = (a, b) => {
+//     const result = a + b;
+//     return result;
+// };
+
+// const summ = (a, b) => a + b;
+
+// const summ = (a, b) => a + b;
+//     const result = summ (10, 30);
+//     console.log(result);
+
+// ================================= Массивы
+
+// const autoBrand1 = 'Mazda';
+// const autoBrand2 = 'BMW';
+// const autoBrand3 = 'AUDI';
+// const autoBrand4 = 'WV';
+// const autoBrand5 = 'Toyota';
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+
+// console.log(autoBrands);
+// console.log(autoBrands[0]);
+// console.log(autoBrands[1]);
+// console.log(autoBrands[2]);
+// console.log(autoBrands[3]);
+// console.log(autoBrands[4]);
+// console.log(autoBrands.length);
+
+
+// ================================= Методы массивов
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+// console.log(autoBrands);
+
+// autoBrands.push('Nissan');
+// console.log(autoBrands);
+
+// autoBrands.splice(2, 1);
+// console.log(autoBrands);
+
+// ================================= Цикл for.
+
+// console.log('Start');
+
+// for (let i = 0; i < 5; i ++) {
+//     console.log(i);
+// }
+
+// console.log('Finish');
+
+// ================================= Обход массива циклом for
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+
+// console.log(autoBrands);
+// console.log(autoBrands[0]);
+// console.log(autoBrands[1]);
+// console.log(autoBrands[2]);
+// console.log(autoBrands[3]);
+// console.log(autoBrands[4]);
+
+// for (i = 0; i < autoBrands.length; i++) {
+//     console.log(autoBrands[i]);
+// }
+
+// ================================ Цикл for ( of ). Обход массива циклом for ( of )
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+
+// for (let brand of autoBrands) {
+// console.log(brand);
+// }
+
+// ================================ Метод .forEach() для обхода массивов
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+
+// for (let brand of autoBrands) {
+// console.log(brand);
+// }
+
+// ================================ Метод .forEach() для обхода массивов
+
+// const autoBrands = ['Mazda', 'BMW', 'AUDI', 'WV', 'Toyota'];
+
+    // autoBrands.forEach(function (brand, index) {
+
+    // console.log(item);
+
+    // console.log(`${brand} => ${index}`);
+    // })
+
+    // autoBrands.forEach(printBrand);
+    // function printBrand(brand, index) {
+    //     console.log(`${brand} => ${index}`);
+    // }
+
+// autoBrands.forEach((brand, index) => {console.log(`${brand} => ${index}`);});
+
+// ================================ Объекты
+// ================================ Объекты. Свойства объектов
+
+// let userName = 'Alex';
+// let age = 40;
+// let isMarried = true;
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+// }
+
+// console.log(person);
+// console.log(person.userName);
+// console.log(person['age']);
+
+// let propertyName = 'profession';
+
+// person.profession = 'JS Developer';
+
+// console.log(person);
+
+// delete person.age;
+// console.log(person);
+
+// ================================ Методы в объектах
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+//     sayHi: function (name) {
+//         console.log(`Hello, ${name}!`);
+//     }
+// };
+
+// person.sayHi = function (name) {
+//     console.log(`Hello, ${name}!`);
+// };
+
+// person.sayHi('Alex')
+
+// ================================ Ключевое слово this
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+//     sayHi: function (name) {
+//         console.log(this);
+//         console.log(`Hello, ${name}! My name is ${this.userName}`);
+//     }
+// };
+
+// person.sayHi('Bob')
+
+// ================================ Обход свойств объекта через цикл for ( in )
+
+// в отличии от for...of, for...in
+// может использовться в неитерируемых объектах и вызывает ключ
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+//     sayHi: function (yourName) {
+//         console.log(this);
+//         console.log(`Hello, ${yourName}! My name is ${this.userName}`);
+//     }
+// };
+
+// for (let key in person) {
+//     console.log(key);
+//     console.log(key, ':', person [key]);
+// }
+
+// ================================ Нюанс с const и изменением объекта или массива
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+    
+// };
+
+// person.profession = 'SEO';
+
+// ================================ Классы. Конструкторы объектов
+
+// const person = {
+//     userName: 'Alex',
+//     age: 30,
+//     isMarried: true,
+//     sayHi: function () {
+//         console.log(this);
+//         console.log(`Hello, ${yourName}! My name is ${this.userName}`);
+//     }
+// };
+
+// const person2 = {
+//     userName: 'Bob',
+//     age: 28,
+//     isMarried: false,
+//     sayHi: function () {
+//         console.log(this);
+//         console.log(`Hello, ${yourName}! My name is ${this.userName}`);
+//     }
+// };
+
+// класс - это как шаблон для всех будущих объектов,
+// которые будут создаваться на его основе
+
+// class Person {
+//     constructor(userName, age, isMarried) {
+//         this.userName = userName;
+//         this.age = age;
+//         this.isMarried = isMarried;
+//     }
+//     sayHi(name) {
+//         console.log(`Hello, ${name}! My name is ${this.userName}`);
+//     }
+// }
+
+// const person1 = new Person('Alex', 30, true);
+// const person2 = new Person('Bob', 40, false);
+
+// console.log(person1);
+// console.log(person2);
+
+// person1.sayHi('Fred');
+
+// ================================ Работа с DOM
+
+// ================================ Выбор DOM элементов
+
+// Выбор одного элемента по DOM селектору
+
+// document.querySelector('selector');
+
+// document.querySelector('h2').classList.add('red')
+
+// const heading2 = document.querySelector('h2');
+// heading2.classList.add('red');
+
+// document.querySelector('.heading-3').classList.add('green');
+
+// Выбор коллекции элементов по DOM селектору
+
+// const headings = document.querySelectorAll('h2');
+// for (let heading of headings) {
+//     console.log(heading);
+//     heading.classList.add('red-text');
+// }
+
+// const paragraphs = document.querySelectorAll('p');
+// // for (let p of paragraphs) {
+// //     p.classList.add('green-text');
+// // }
+
+// paragraphs.forEach(function (item) {
+//     item.classList.add('green-text');
+// })
+
+// ================================ Работа с CSS классами
+
+// heading.classList.add();
+// heading.classList.remove();
+// heading.classList.toggle();
+// heading.classList.contains();
+
+// const heading = document.querySelector('h2');
+// console.log(heading);
+// heading.classList.add('red-text');
+// heading.classList.remove('red-text');
+// heading.classList.toggle('green-text');
+// heading.classList.toggle('green');
+
+// heading.classList.contains('green');
+
+// ================================ Работа с Атрибутами
+
+// const img = document.querySelector('#logo');
+// const srcValue = img.getAttribute('src');
+// console.log(srcValue);
+
+// img.setAttribute('src', './img/php.png');
+// img.setAttribute('width', '100');
+// img.src = './img/js.png';
+
+// const button = document.querySelector('#button');
+// button.setAttribute('value', 'Send');
+// button.value = 'Fire!';
+
+// ================================ Работа с прослушкой событий
+
+// const button = document.querySelector('#button');
+// const img = document.querySelector('#logo');
+// button.value = 'KILL img JS';
+// button.addEventListener('click', function () {
+//     console.log('Click');
+//     img.remove();
+// })
+// button.onclick = function () {
+//         console.log('Click');
+//         img.remove();
+
+// }
+// button.addEventListener('click', function () {
+//     console.log('Click1');
+//     // img.remove();
+// })
+
+// button.addEventListener('click', function () {
+//     console.log('Click2');
+//     // img.remove();
+// })
+
+// button.addEventListener('click', function () {
+//     console.log('Click3');
+//     // img.remove();
+// })
+
+// ================================ Прослушка событий 2. Форма
+
+// const inputText = document.querySelector('#input-text');
+// const textBlock = document.querySelector('#text-block');
+
+// inputText.addEventListener('input', inputHandler)
+//     () {
+//     console.log('Input!');
+//     console.log(inputText.value);
+//     textBlock.innerText = inputText.value;
+// });
+
+// function inputHandler() {
+//     console.log(inputText.value);
+//     textBlock.innerText = inputText.value;
+// }
+
+// ================================ Объект event
+
+// const list = document.querySelector('#list');
+// list.addEventListener('click', function (event) {
+//     console.log(this);
+//     console.log(event);
+//     console.log(event.target);
+// });
+
+// ================================ Работа c HTML элементами. Создание. Копирование.
+
+// Выбор контейнера
+const container = document.querySelector('#elementsContainer');
+
+// Создание заголовака
+const newHeader = document.createElement('h1');
+
+newHeader.innerText = 'New header';
+container.append(newHeader);
+
+// Копирование шапки
+// const mainHeader = document.querySelector('header');
+// const headerCopy = mainHeader.cloneNode(true);
+// container.append(headerCopy);
+
+// Вставка разметки через строки
+const htmlExample = '<h2> Создание и копирование элементов </h2>';
+container.insertAdjacentHTML('beforeend', htmlExample);
