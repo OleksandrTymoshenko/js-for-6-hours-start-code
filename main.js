@@ -660,13 +660,13 @@
 // ================================ Работа c HTML элементами. Создание. Копирование.
 
 // Выбор контейнера
-const container = document.querySelector('#elementsContainer');
+// const container = document.querySelector('#elementsContainer');
 
 // Создание заголовака
-const newHeader = document.createElement('h1');
+// const newHeader = document.createElement('h1');
 
-newHeader.innerText = 'New header';
-container.append(newHeader);
+// newHeader.innerText = 'New header';
+// container.append(newHeader);
 
 // Копирование шапки
 // const mainHeader = document.querySelector('header');
@@ -674,5 +674,49 @@ container.append(newHeader);
 // container.append(headerCopy);
 
 // Вставка разметки через строки
-const htmlExample = '<h2> Создание и копирование элементов </h2>';
-container.insertAdjacentHTML('beforeend', htmlExample);
+// const htmlExample = '<h2> Создание и копирование элементов </h2>';
+// container.insertAdjacentHTML('beforeend', htmlExample);
+
+// ================================ ToDoсписок задач
+
+// const todoList = document.querySelector('#todo-list');
+// const todoForm = document.querySelector('#todo-form');
+// const todoInput = document.querySelector('#todo-input');
+
+// todoForm.addEventListener('submit', formHandler);
+
+// function formHandler() {
+//     event.preventDefault();
+//     //get input value task name
+//     const taskText = todoInput.value;
+//     // console.log(taskText);
+//     //create tag <li> by markup
+//     // const li = `<li>${taskText}</li>`;
+//     // console.log(li);
+//     //add thr markup to the pdge
+//     // todoList.insertAdjacentHTML('beforeend', li);
+//     //create tag <li> by createElement
+//     const newTask = document.createElement('li');
+//     newTask.innerText = taskText;
+//     //create Delite button
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.innerText = 'Delete';
+//     deleteBtn.style['marginLeft'] = '15px';
+//     newTask.append(deleteBtn);
+//     //add eventListener by click
+//     deleteBtn.addEventListener('click', function () {
+//         this.closest('li').remove();
+//     });
+//     //add element to the page
+//     todoList.append(newTask);
+//     //to clear input
+//     todoInput.value = '';
+//     //direct input focus
+//     todoInput.focus();
+// }
+
+// ================================ setInterval
+
+setInterval(function () {
+    
+}, 1000)
